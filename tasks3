@@ -1,0 +1,13 @@
+const myMap = new Map([
+    ['name', 'Анна'],
+    ['age', 25],
+    ['city', 'Москва'],
+    [true, 'логическое значение'],
+    [42, 'ответ на главный вопрос']
+]);
+
+// Получаем ключи и выводим значения
+console.log('Содержимое Map:');
+for (let key of myMap.keys()) {
+    console.log(`Ключ — ${key}, значение — ${myMap.get(key)}`);
+}
