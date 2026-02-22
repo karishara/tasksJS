@@ -1,0 +1,26 @@
+const array1 = [5, 5, 5, 5, 5]; // Все элементы одинаковые
+const array2 = [1, 2, 3, 4, 5]; // Разные элементы
+const array3 = ["hello", "hello", "hello"]; // Все строки одинаковые
+const array4 = []; // Пустой массив
+
+// Функция для проверки одинаковости элементов
+function checkAllElementsEqual(arr) {
+    // Если массив пустой или имеет один элемент, считаем что все элементы одинаковые
+    if (arr.length <= 1) {
+        return true;
+    }
+    
+    // Сравниваем каждый элемент с первым
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] !== arr[0]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Проверяем массивы
+console.log(`Массив [${array1}]: ${checkAllElementsEqual(array1)}`);
+console.log(`Массив [${array2}]: ${checkAllElementsEqual(array2)}`);
+console.log(`Массив [${array3}]: ${checkAllElementsEqual(array3)}`);
+console.log(`Пустой массив: ${checkAllElementsEqual(array4)}`);
