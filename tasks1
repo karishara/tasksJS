@@ -1,0 +1,5 @@
+const array = [1, 2, 3, 4, 5, "шесть", "семь", true, false];
+console.log(`Количество элементов: ${array.length}`);
+array.forEach(function(element) {
+    console.log(element);
+});
